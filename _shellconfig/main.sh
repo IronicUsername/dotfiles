@@ -1,14 +1,15 @@
 #!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "==> Running main.sh"
 
 echo "Setting up zsh..."
-./zsh.sh
+$parent_path/zsh.sh
 
 echo "Installing oh-my-zsh..."
-./oh_my_zsh.sh
+$parent_path/oh_my_zsh.sh
 
 echo "Installing zsh plugins..."
-./plugins.sh
+$parent_path/plugins.sh
 
 echo "Installing iTerm2 Shell Integration..."
 curl -sL https://iterm2.com/shell_integration/zsh > $HOME/.iterm2_shell_integration.zsh
@@ -25,9 +26,6 @@ git clone https://github.com/powerline/fonts.git
     ./install.sh
 )
 rm -rf fonts
-
-echo "Setting up python"
-./python.sh
 
 echo "Make git use diff-so-fancy for every output"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
