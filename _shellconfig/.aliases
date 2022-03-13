@@ -1,0 +1,173 @@
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias h='cd ~/'
+alias godev='cd ~/Development/'
+alias gopers='cd ~/Development/personal/'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Work
+alias secret="aws-vault exec deniz-toma -- chamber"
+
+# Shortcuts
+alias dotfiles="cd ~/.config/dotfiles"
+alias ipy="ipython"
+alias clirm='clear && echo -en "\e[3J"'
+alias clire='clirm && exec $SHELL'
+alias pt='pytest --no-cov -x'
+alias sv='source .venv/bin/activate'
+alias fml='flake8 . && mypy . && pydocstyle .'
+alias dcu='docker-compose up --build --force-recreate -d'
+alias killem='docker-compose down -v'
+alias piprm='pip freeze | xargs pip uninstall -y'
+alias dockerrm='docker system prune -a --volumes'
+alias nrs='npm run serve'
+alias nrd='npm run dev'
+alias brewUpdateAll='brew update && brew outdated && brew upgrade && brew cleanup'
+alias notes='code $HOME/Development/personal/notes'
+alias topfiles="du -a $1 | sort -n -r | head -n 20"
+alias scim="sc-im"
+alias v="nvim"
+
+# Network
+alias dig="dig @8.8.8.8 ANY +noall +answer $1"
+alias digns="dig @8.8.8.8 +short NS $1"
+alias whois="whois -h whois-servers.net"
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias scan="nmap -T4 --max-rtt-timeout=500ms --initial-rtt-timeout=200ms --min-rtt-timeout=200ms --open --stats-every 5s $1"
+alias sscan="sudo nmap -sS -T4 --max-rtt-timeout=500ms --initial-rtt-timeout=200ms --min-rtt-timeout=200ms --open --stats-every 5s $1"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+
+# Clean up LaunchServices to remove duplicates in the "Open With" menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# VS Code extension management
+alias vscode-extensions-save='code --list-extensions > ~/.config/dotfiles/_appconfig/vscode/extensions.txt && echo Done!'
+alias vscode-extensions-install='xargs -n 1 code --install-extension < ~/.config/dotfiles/_appconfig/vscode/extensions.txt'
+
+# ImageOptim
+alias imageoptim='open -a ImageOptim "$@"'
+
+# Other
+alias server='python -m http.server 8888'
+alias redis='redis-server'
+alias npmls='npm list --depth=0 "$@" 2>/dev/null'
+alias pycclean='find . -name \*.pyc -delete'
+alias travis='docker run -it --rm -v `pwd`:/data -v $HOME/.travis:/root/.travis jpadilla/travis-cli $@'
+alias sshf='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+alias k='kubectl'
+
+# Functions
+function ip() {
+  IP=$(ipconfig getifaddr en0)
+  IFACE="en0"
+
+  if [[ -z "$IP" ]]; then
+    IP=$(ipconfig getifaddr en4)
+    IFACE="en4"
+  fi
+
+  echo "Local($IFACE): $IP"
+  echo "Remote:     $(curl -s https://ipinfo.io/ip)"
+}
+
+function gi() {
+  curl https://www.gitignore.io/api/$@;
+}
+
+function docker-cleanup() {
+	docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+	docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+}
+
+function archive() {
+  tar cvJf "$1.tar.xz" "$1"
+}
+
+function unarchive() {
+  tar xvJf "$1"
+}
+
+function ipinfo() {
+  open https://ipinfo.io/$1
+}
+
+function sshTunnel() {
+  if [ -z "$1" ]
+    then
+      echo "No arguments supplied."
+      return
+  else
+    if [[ $1 =~ ^[+-]?[0-9]+$ ]]
+      then
+        dbPort=$1
+    elif [ $1 = "mysql" ]
+      then
+        dbPort=3306
+    elif [ $1 = "psql" ]
+      then
+        dbPort=5432
+    elif [ $1 = "mongo" ]
+      then
+        dbPort=27017
+    else
+      echo "An error occured."
+      return
+    fi
+  fi
+
+  echo "Connecting to port $dbPort..."
+  ssh -L $dbPort:127.0.0.1:$dbPort cooldude@echeclus.uberspace.de
+}
+
+function lc () {
+    cd $1 &&
+    ls -la $2
+}
+
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
+
+tmuxstart () {
+  if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    session_priv="priv"
+    tmux has-session -t $session_priv 2>/dev/null
+    if [ $? != 0 ]; then
+      # https://stackoverflow.com/a/54637889
+      tmux new-session -d -A -s "priv" -n "default"
+      tmux splitw -vb -p 5 -t 0
+      tmux splitw -vh -p 50 -t 1 -c "$HOME/Development/"
+      tmux send-keys -t 0 "caffeinate -dim" Enter
+      tmux select-pane -t 1
+    fi
+
+    session_work="work"
+    tmux has-session -t $session_work 2>/dev/null
+    if [ $? != 0 ]; then
+      tmux new-session -d -A -s "work" -c "$HOME/Development/work"
+      tmux splitw -vh -p 50 -t "work" -c "$HOME/Development/work"
+      tmux select-pane -t 0
+    fi
+
+  fi
+  tmux a -t "priv":0
+}
