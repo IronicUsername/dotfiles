@@ -18,15 +18,21 @@ git clone https://github.com/IronicUsername/dotfiles.git $HOME/.config/dotfiles
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Detected Mac OSX system."
-    read -p "Continue with macconfig steps?" -n 1 -r
+    read -p "Continue with macconfig steps? (y/n)" -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        echo "continuing with macconfig..."
+        echo "\ncontinuing with macconfig..."
         ./_macconfig/main.sh
     else
         echo "continuing with linux/unix steps..."
         ./_unixconfig/main.sh
     fi
 fi
+
+echo "Setting up shell..."
+./_shellconfig/main.sh
+
+echo "Setting up ssh..."
+./_pythonconfig/main.sh
 
 echo "Setting up ssh..."
 ./_sshconfig/main.sh

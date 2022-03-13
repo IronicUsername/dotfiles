@@ -1,9 +1,10 @@
 #!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "==> Running main.sh"
 export COMPUTER_NAME="deniz"
 
 echo "Doing Brewfiles (and your mom ;])"
-./brew.sh
+$parent_path/brew.sh
 
 echo "Accept Xcode license"
 sudo xcodebuild -license accept
@@ -17,16 +18,16 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "Setting up UI/UX..."
-./ui.sh
+$parent_path/ui.sh
 
 echo "Setting up Dock..."
-./dock.sh
+$parent_path/dock.sh
 
 echo "Setting up Finder..."
-./finder.sh
+$parent_path/finder.sh
 
 echo "Setting up software updates..."
-./updates.sh
+$parent_path/updates.sh
 
 echo "Setting symlinks..."
-./symlinks.sh
+$parent_path/symlinks.sh
