@@ -27,7 +27,7 @@ plugins=(
     dirhistory
     # fancy-ctrl-z
     git
-    osx
+    macos
     poetry
     z
     zsh-autosuggestions
@@ -39,7 +39,7 @@ plugins=(
 ZSH_THEME="agnoster-custom"
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases
+source $HOME/.config/dotfiles/_shellconfig/.aliases
 source $HOME/.iterm2_shell_integration.zsh
 
 
@@ -82,3 +82,5 @@ fi
 if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then
     screenfetch
 fi
+
+export PATH="$HOME/.poetry/bin:$PATH"

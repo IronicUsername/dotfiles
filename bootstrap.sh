@@ -25,7 +25,7 @@ fi
 echo "Setting up shell..."
 ./_shellconfig/main.sh
 
-echo "Setting up ssh..."
+echo "Setting up python in general..."
 ./_pythonconfig/main.sh
 
 echo "Setting up ssh..."
@@ -33,3 +33,6 @@ echo "Setting up ssh..."
 
 echo "Settings up apps..."
 ./_appconfig/main.sh
+
+source $HOME/.zshrc
+echo "Done, enjoy :) (like i enjoyed your mom)"

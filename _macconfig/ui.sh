@@ -82,7 +82,7 @@ echo "Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-echo "Save screenshots to the desktop"
+echo "Save screenshots to $\HOME/Pictures/Screenshots"
 mkdir -p $HOME/Pictures/Screenshots
 defaults write com.apple.screencapture name ""
 defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
