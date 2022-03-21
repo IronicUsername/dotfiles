@@ -3,6 +3,7 @@ echo "==> Running python.sh"
 
 echo "Installing and setting up poetry..."
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
 source $HOME/.poetry/env
 poetry completions zsh > $HOME/.zsh/completions/_poetry
 poetry config virtualenvs.in-project true
