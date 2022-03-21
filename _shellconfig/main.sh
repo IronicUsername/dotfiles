@@ -1,15 +1,15 @@
 #!/bin/bash
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+current_relative_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "==> Running main.sh"
 
 echo "Setting up zsh..."
-$parent_path/zsh.sh
+$current_relative_path/zsh.sh
 
 echo "Installing oh-my-zsh..."
-$parent_path/oh_my_zsh.sh
+$current_relative_path/oh_my_zsh.sh
 
 echo "Installing zsh plugins..."
-$parent_path/plugins.sh
+$current_relative_path/plugins.sh
 
 echo "Installing iTerm2 Shell Integration..."
 curl -sL https://iterm2.com/shell_integration/zsh > $HOME/.iterm2_shell_integration.zsh
