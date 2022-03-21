@@ -30,3 +30,6 @@ echo "Setting up ssh..."
 
 echo "Setting up ssh..."
 ./_sshconfig/main.sh
+
+echo "Settings up apps..."
+./_appconfig/main.sh

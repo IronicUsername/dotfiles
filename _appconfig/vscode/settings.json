@@ -76,7 +76,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.cursorSmoothCaretAnimation": true,
-    "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/vscode/.mustache",
+    "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache",
     "languageStylus.useSeparator": false,
     "dart.debugExternalLibraries": true,
     "dart.debugSdkLibraries": true,

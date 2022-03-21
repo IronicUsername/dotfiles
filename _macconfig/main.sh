@@ -7,7 +7,7 @@ current_relative_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "Doing Brewfiles (and your mom ;])"
 $current_relative_path/brew.sh
 
-echo "Setting up python"
+echo "Setting up in general python"
 $current_relative_path/../_pythonconfig/main.sh
 
 echo "Accept Xcode license"
@@ -34,4 +34,4 @@ echo "Setting up software updates..."
 $current_relative_path/updates.sh
 
 echo "Setting symlinks..."
-$current_relative_path/symlinks.sh
+# $current_relative_path/symlinks.sh
