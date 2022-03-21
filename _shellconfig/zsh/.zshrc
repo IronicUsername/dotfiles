@@ -1,9 +1,9 @@
-caffeinate -i $HOME/.zsh/install.sh
+caffeinate -i $HOME/.config/zsh/install.sh
 stty discard undef
 ZSH_DISABLE_COMPFIX=true
 
 # Path to oh-my-zsh installation.
-export ZSH="$HOME/.zsh/oh-my-zsh"
+export ZSH="$HOME/.config/zsh/oh-my-zsh"
 export TERM="xterm-256color"
 
 # Options
@@ -21,7 +21,7 @@ SAVEHIST=99999
 HIST_STAMP="yyyy-mm-dd"
 
 # Plugins
-ZSH_CUSTOM="$HOME/.zsh/custom"
+ZSH_CUSTOM="$HOME/.config/zsh/custom"
 plugins=(
     alias-tips
     dirhistory
@@ -46,8 +46,12 @@ source $HOME/.iterm2_shell_integration.zsh
 # Added /include CFLAGS so XCode is working properly
 export CFLAGS="$CFLAGS -I$(xcrun --show-sdk-path)/usr/include"
 
+eval "$(pyenv init -)"
 
 # Commands
+export PYENV_ROOT=$HOME/.config/pyenv
+export PATH="$PYENV_ROOT/shims:$PATH"
+
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
@@ -57,6 +61,7 @@ export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH=$HOME/.flutter/flutter/bin:$PATH
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.config/poetry/bin:$PATH"
 export ANDROID_HOME=/usr/local/share/android-sdk
 
 export PYTHONDONTWRITEBYTECODE=1
@@ -64,15 +69,12 @@ export PYTHONUNBUFFERED=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.config/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # TheFuck
 eval $(thefuck --alias)
-
-# Poetry
-source $HOME/.poetry/env
 
 if [[ -o login ]]; then
     export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
@@ -83,4 +85,3 @@ if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then
     screenfetch
 fi
 
-export PATH="$HOME/.poetry/bin:$PATH"

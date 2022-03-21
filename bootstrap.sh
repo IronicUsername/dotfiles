@@ -34,5 +34,9 @@ echo "Setting up ssh..."
 echo "Settings up apps..."
 ./_appconfig/main.sh
 
-source $HOME/.zshrc
+echo "Cleanup..."
+mv -t .config .npm .nvm .tmux
+rm .zcompdump*
+
+source $HOME/.config/zsh/.zshrc
 echo "Done, enjoy :) (like i enjoyed your mom)"

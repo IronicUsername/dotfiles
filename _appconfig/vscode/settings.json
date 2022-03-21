@@ -132,7 +132,6 @@
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.envFile": "${workspaceFolder}/backend/.env",
     "python.venvPath": "${workspaceFolder}/.venv/bin/python",
-    "quokka.startViewStatusBar": false,
     "security.workspace.trust.untrustedFiles": "open",
     "spotify.muteButtonPriority": 0,
     "spotify.showSignInButton": false,

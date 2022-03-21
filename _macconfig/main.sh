@@ -34,4 +34,4 @@ echo "Setting up software updates..."
 $current_relative_path/updates.sh
 
 echo "Setting symlinks..."
-# $current_relative_path/symlinks.sh
+$current_relative_path/symlinks.sh

@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "==> Running ui.sh"
 
+sudo -v
+
 echo "Set computer name (as done via System Preferences → Sharing)"
 sudo scutil --set ComputerName "$COMPUTER_NAME"
 sudo scutil --set HostName "$COMPUTER_NAME"
@@ -30,7 +32,7 @@ echo "Display ASCII control characters using caret notation in standard text vie
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
-ehco "Disable automatic termination of inactive apps"
+echo "Disable automatic termination of inactive apps"
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 echo "Disable smart dashes as they're annoying when typing code"

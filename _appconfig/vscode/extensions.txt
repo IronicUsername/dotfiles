@@ -33,5 +33,4 @@ shd101wyy.markdown-preview-enhanced
 shyykoserhiy.vscode-spotify
 syler.sass-indented
 vadimcn.vscode-lldb
-WallabyJs.quokka-vscode
 yo1dog.cursor-align

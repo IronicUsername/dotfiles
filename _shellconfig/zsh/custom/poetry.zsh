@@ -1,8 +1,8 @@
-if [ ! -d $HOME/.poetry ]; then
+if [ ! -d $HOME/.config/poetry ]; then
     echo "Installing Poetry..."
-    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | /usr/bin/python >/dev/null
+    curl -sSL https://install.python-poetry.org | POETRY_HOME=$HOME/.config/poetry python3 -
 fi
 if [[ -o login ]]; then
-  source $HOME/.poetry/env
-  poetry completions zsh > $HOME/.zsh/completions/_poetry
+  export PATH="$HOME/.config/poetry/bin:$PATH"
+  poetry completions zsh > $HOME/.config/zsh/completions/_poetry
 fi

@@ -2,14 +2,14 @@
 echo "==> Running python.sh"
 
 echo "Installing and setting up poetry..."
-curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+curl -sSL https://install.python-poetry.org | POETRY_HOME=$HOME/.config/poetry python3 -
 
-source $HOME/.poetry/env
-poetry completions zsh > $HOME/.zsh/completions/_poetry
+export PATH="$HOME/.config/poetry/bin:$PATH"
+poetry completions zsh > $HOME/.config/zsh/completions/_poetry
 poetry config virtualenvs.in-project true
 
-mkdir -p $HOME/.zsh/custom/plugins/poetry
-poetry completions zsh > $HOME/.zsh/custom/plugins/poetry/_poetry
+mkdir -p $HOME/.config/zsh/custom/plugins/poetry
+poetry completions zsh > $HOME/.config/zsh/custom/plugins/poetry/_poetry
 
 echo "Installing python..."
 PYTHON27_VERSION="2.7.18" # Needed for npm

@@ -9,5 +9,6 @@ echo "Init brew."
 eval $(/opt/homebrew/bin/brew shellenv)
 
 echo "Installing dependencies from Brewfile..."
+export PYENV_ROOT=$HOME/.config/pyenv
 sudo -v
 brew bundle --file=$current_relative_path/Brewfile
