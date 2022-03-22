@@ -25,7 +25,7 @@ ZSH_CUSTOM="$HOME/.config/zsh/custom"
 plugins=(
     alias-tips
     dirhistory
-    # fancy-ctrl-z
+    fancy-ctrl-z
     git
     macos
     poetry
@@ -45,13 +45,6 @@ source $HOME/.iterm2_shell_integration.zsh
 
 # Added /include CFLAGS so XCode is working properly
 export CFLAGS="$CFLAGS -I$(xcrun --show-sdk-path)/usr/include"
-
-eval "$(pyenv init -)"
-
-# Commands
-export PYENV_ROOT=$HOME/.config/pyenv
-export PATH="$PYENV_ROOT/shims:$PATH"
-
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
@@ -61,12 +54,20 @@ export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH=$HOME/.flutter/flutter/bin:$PATH
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export PATH="$HOME/.config/poetry/bin:$PATH"
 export ANDROID_HOME=/usr/local/share/android-sdk
 
+# python
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# poetry
+export PATH="$HOME/.config/poetry/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+export PYENV_ROOT=$HOME/.config/pyenv
+export PATH="$PYENV_ROOT/shims:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.config/.nvm"

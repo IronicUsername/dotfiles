@@ -12,6 +12,11 @@ mkdir -p $HOME/.config/zsh/custom/plugins/poetry
 poetry completions zsh > $HOME/.config/zsh/custom/plugins/poetry/_poetry
 
 echo "Installing python..."
+
+eval "$(pyenv init -)"
+export PYENV_ROOT=$HOME/.config/pyenv
+export PATH="$PYENV_ROOT/shims:$PATH"
+
 PYTHON27_VERSION="2.7.18" # Needed for npm
 pyenv install "$PYTHON27_VERSION"
 echo "Python 3.6.8 ..."
