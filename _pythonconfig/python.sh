@@ -27,5 +27,3 @@ echo "Python 3.9.5 ..."
 pyenv install 3.9.5
 echo "Set Python globally"
 pyenv global 3.9.5
-
-# echo 'eval "$(pyenv init --path)"' >> $HOME/.zprofile  # probably not needed?
