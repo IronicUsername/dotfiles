@@ -6,7 +6,7 @@ echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Init brew."
-eval $(/opt/homebrew/bin/brew shellenv)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing dependencies from Brewfile..."
 export PYENV_ROOT=$HOME/.config/pyenv

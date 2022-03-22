@@ -80,9 +80,3 @@ eval $(thefuck --alias)
 if [[ -o login ]]; then
     export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
-
-# Start
-if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then
-    screenfetch
-fi
-
