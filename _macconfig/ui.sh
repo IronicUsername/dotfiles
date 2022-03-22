@@ -13,7 +13,9 @@ echo "Set language and text formats"
 defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleTemperatureUnit Celsius
 defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 echo "Disable automatic capitalization as it's annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -132,7 +134,7 @@ sudo pmset -c sleep 0
 echo "Set machine sleep to 5 minutes on battery"
 sudo pmset -b sleep 5
 
-sudo pmset -a disablesleep 1
+sudo pmset -a disablesleep 0
 
 echo "Never go into computer sleep mode"
 sudo systemsetup -setcomputersleep Off > /dev/null

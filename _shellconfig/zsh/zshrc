@@ -55,6 +55,7 @@ export PATH=$HOME/Applications/bin:$PATH
 export PATH=$HOME/.flutter/flutter/bin:$PATH
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export ANDROID_HOME=/usr/local/share/android-sdk
+export DOCKER_CONFIG=$HOME/.config/docker
 
 # python
 export PYTHONDONTWRITEBYTECODE=1
