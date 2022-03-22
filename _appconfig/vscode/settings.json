@@ -124,8 +124,6 @@
         "jupyter-notebook": "left"
     },
     "powermode.enabled": true,
-    "powermode.shakeIntensity": 1,
-    "powermode.enableShake": false,
     "powermode.enableStatusBarComboTimer": false,
     "python.pythonPath": "/Users/deniz/.config/pyenv/versions/3.7.5/bin/python",
     "python.languageServer": "Pylance",
@@ -298,6 +296,11 @@
         "shell": true
     },
     "window.zoomLevel": -0.65,
+    "powermode.combo.location": "statusbar",
+    "powermode.combo.counterEnabled": "default",
+    "powermode.combo.timerEnabled": "hide",
+    "powermode.shake.enabled": false,
+    "powermode.shake.intensity": 1,
     // "window.zoomLevel": 1.25, // screen sharring
     // "editor.guides.indentation": false,
     // "editor.wordWrap": "off",

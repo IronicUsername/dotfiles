@@ -23,7 +23,10 @@ symlinkFilesTo home "${HOME}"
 
 # vscode
 echo "--> VSCode symlinks..."
-mkdir -p "${HOME}/Library/Application Support/Code/User/snippets"
+ln -s $HOME/.config/dotfiles/_appconfig/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+ln -s $HOME/.config/dotfiles/_appconfig/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+ln -s $HOME/.config/dotfiles/_appconfig/vscode/snippets $HOME/Library/Application\ Support/Code/User
+
 symlinkFilesTo vscode "${HOME}/Library/Application Support/Code/User"
 
 # Done
