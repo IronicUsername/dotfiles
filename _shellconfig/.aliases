@@ -30,6 +30,7 @@ alias notes='code $HOME/Development/personal/notes'
 alias topfiles="du -a $1 | sort -n -r | head -n 20"
 alias scim="sc-im"
 alias v="nvim"
+alias messy="ls -a $HOME | wc -l"
 
 # Network
 alias dig="dig @8.8.8.8 ANY +noall +answer $1"
