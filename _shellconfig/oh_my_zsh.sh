@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "==> Running oh_my_zsh.sh"
 
-export ZSH=$HOME/.config/zsh/oh-my-zsh
+export ZSH=$XDG_CONFIG_HOME/zsh/oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing oh-my-zsh custom themes"
-ln -s $HOME/.config/dotfiles/_shellconfig/oh_my_zsh/themes $HOME/.config/zsh/custom
+ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/oh_my_zsh/themes $XDG_CONFIG_HOME/zsh/custom

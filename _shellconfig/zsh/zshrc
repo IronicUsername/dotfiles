@@ -1,9 +1,9 @@
-caffeinate -i $HOME/.config/zsh/install.sh
+caffeinate -i $XDG_CONFIG_HOME/zsh/install.sh
 stty discard undef
 ZSH_DISABLE_COMPFIX=true
 
 # Path to oh-my-zsh installation.
-export ZSH="$HOME/.config/zsh/oh-my-zsh"
+export ZSH="$XDG_CONFIG_HOME/zsh/oh-my-zsh"
 export TERM="xterm-256color"
 
 # Options
@@ -21,7 +21,7 @@ SAVEHIST=99999
 HIST_STAMP="yyyy-mm-dd"
 
 # Plugins
-ZSH_CUSTOM="$HOME/.config/zsh/custom"
+ZSH_CUSTOM="$XDG_CONFIG_HOME/zsh/custom"
 plugins=(
     alias-tips
     dirhistory
@@ -39,8 +39,8 @@ plugins=(
 ZSH_THEME="agnoster-custom"
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.config/dotfiles/_shellconfig/.aliases
-source $HOME/.iterm2_shell_integration.zsh
+source $XDG_CONFIG_HOME/dotfiles/_shellconfig/.aliases
+source $ZSH_CUSTOM/plugins/iterm2/.iterm2_shell_integration.zsh
 
 
 # Added /include CFLAGS so XCode is working properly
@@ -52,28 +52,23 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
-export PATH=$HOME/.flutter/flutter/bin:$PATH
+export PATH=$XDG_CONFIG_HOME/flutter/flutter/bin:$PATH
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="$XDG_CONFIG_HOME/poetry/bin:$PATH"  # poetry
+# export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
+# export PATH="/opt/homebrew/opt/python@3.9/bin:$PATH"
 export ANDROID_HOME=/usr/local/share/android-sdk
-export DOCKER_CONFIG=$HOME/.config/docker
 
 # python
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# poetry
-export PATH="$HOME/.config/poetry/bin:$PATH"
 
 # pyenv
-eval "$(pyenv init -)"
-export PYENV_ROOT=$HOME/.config/pyenv
-export PATH="$PYENV_ROOT/shims:$PATH"
-
-# NVM
-export NVM_DIR="$HOME/.config/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# eval "$(pyenv init -)"
+# export PYENV_ROOT=$XDG_CONFIG_HOME/pyenv
+# export PATH="$PYENV_ROOT/shims:$PATH"
 
 # TheFuck
 eval $(thefuck --alias)

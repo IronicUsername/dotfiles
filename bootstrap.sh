@@ -2,17 +2,21 @@
 echo "==> Running bootstrap.sh"
 
 echo "Creating personal folder structure..."
+export XDG_CONFIG_HOME="$HOME/.config"
+
 mkdir -p $HOME/Development/{.archive,personal,notes,tools,sandbox,work/{sandbox}}
 mkdir -p $HOME/.ssh
-mkdir -p $HOME/.config
+mkdir -p $XDG_CONFIG_HOME/{npm}
 mkdir -p $HOME/Music/SoundCloud/
+
 ln -s $HOME/Music/SoundCloud $HOME/Downloads/music
 
 echo "Cloning dotfiles repo..."
-git clone https://github.com/IronicUsername/dotfiles.git $HOME/.config/dotfiles
+git clone https://github.com/IronicUsername/dotfiles.git $XDG_CONFIG_HOME/dotfiles
 
 echo "Switch2dotfiles folder..."
-cd $HOME/.config/dotfiles
+cd $XDG_CONFIG_HOME/dotfiles
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/npm/npmrc $XDG_CONFIG_HOME/npm/npmrc
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Detected Mac OSX system. Continuing with macconfig..."
@@ -38,5 +42,5 @@ echo "Cleanup..."
 mv -t .config .npm .nvm .tmux
 rm .zcompdump*
 
-source $HOME/.config/zsh/.zshrc
+source $XDG_CONFIG_HOME/zsh/.zshrc
 echo "Done, enjoy :) (like i enjoyed your mom)"

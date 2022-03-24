@@ -29,3 +29,7 @@ Temporary Items
 home/.bin/circleci
 home/.bin/helm
 home/.bin/sops
+
+# iterm
+_appconfig/iterm/*
+!_appconfig/iterm/com.googlecode.iterm2.plist

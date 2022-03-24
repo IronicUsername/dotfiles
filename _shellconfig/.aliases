@@ -32,6 +32,13 @@ alias scim="sc-im"
 alias v="nvim"
 alias messy="ls -a $HOME | wc -l"
 
+# Python versions
+alias py3.8="/opt/homebrew/opt/python@3.8/bin/python3"
+alias py3.9="/opt/homebrew/opt/python@3.9/bin/python3"
+alias py3.10="/opt/homebrew/opt/python@3.10/bin/python3"
+# alias python="py3.9"
+
+
 # Network
 alias dig="dig @8.8.8.8 ANY +noall +answer $1"
 alias digns="dig @8.8.8.8 +short NS $1"

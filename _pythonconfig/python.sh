@@ -2,19 +2,19 @@
 echo "==> Running python.sh"
 
 echo "Installing and setting up poetry..."
-curl -sSL https://install.python-poetry.org | POETRY_HOME=$HOME/.config/poetry python3 -
+curl -sSL https://install.python-poetry.org | POETRY_HOME=$XDG_CONFIG_HOME/poetry python3 -
 
-export PATH="$HOME/.config/poetry/bin:$PATH"
-poetry completions zsh > $HOME/.config/zsh/completions/_poetry
+export PATH="$XDG_CONFIG_HOME/poetry/bin:$PATH"
+poetry completions zsh > $XDG_CONFIG_HOME/zsh/completions/_poetry
 poetry config virtualenvs.in-project true
 
-mkdir -p $HOME/.config/zsh/custom/plugins/poetry
-poetry completions zsh > $HOME/.config/zsh/custom/plugins/poetry/_poetry
+mkdir -p $XDG_CONFIG_HOME/zsh/custom/plugins/poetry
+poetry completions zsh > $XDG_CONFIG_HOME/zsh/custom/plugins/poetry/_poetry
 
 echo "Installing python..."
 
 eval "$(pyenv init -)"
-export PYENV_ROOT=$HOME/.config/pyenv
+export PYENV_ROOT=$XDG_CONFIG_HOME/pyenv
 export PATH="$PYENV_ROOT/shims:$PATH"
 
 PYTHON27_VERSION="2.7.18" # Needed for npm

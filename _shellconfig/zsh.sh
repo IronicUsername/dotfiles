@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "==> Running zsh.sh"
 
-mkdir -p $HOME/.config/zsh/completions
-mkdir -p $HOME/.config/zsh/custom/plugins
+mkdir -p $XDG_CONFIG_HOME/zsh/completions
+mkdir -p $XDG_CONFIG_HOME/zsh/custom/plugins
 
-ln -s $HOME/.config/dotfiles/_shellconfig/zsh/zshrc $HOME/.config/zsh/.zshrc
-ln -s $HOME/.config/dotfiles/_shellconfig/zsh/install.sh $HOME/.config/zsh/
-ln -s $HOME/.config/dotfiles/_shellconfig/zsh/custom $HOME/.config/zsh/
+ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
+ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/zsh/install.sh $XDG_CONFIG_HOME/zsh/
+ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/zsh/custom $XDG_CONFIG_HOME/zsh/
 
 touch $HOME/.hushlogin

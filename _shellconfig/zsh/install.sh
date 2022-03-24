@@ -1,9 +1,9 @@
 #!/bin/zsh
-ZSH_CUSTOM_PLUGINS=$HOME/.config/zsh/oh-my-zsh/custom/plugins
+ZSH_CUSTOM_PLUGINS=$XDG_CONFIG_HOME/zsh/oh-my-zsh/custom/plugins
 mkdir -p $ZSH_CUSTOM_PLUGINS
-if [ ! -d $HOME/.config/zsh/oh-my-zsh ]; then
+if [ ! -d $XDG_CONFIG_HOME/zsh/oh-my-zsh ]; then
     echo "Installing Oh My Zsh..."
-    git clone -q https://github.com/robbyrussell/oh-my-zsh.git $HOME/.config/zsh/oh-my-zsh
+    git clone -q https://github.com/robbyrussell/oh-my-zsh.git $XDG_CONFIG_HOME/zsh/oh-my-zsh
 fi
 if [ ! -d $ZSH_CUSTOM_PLUGINS/zsh-autosuggestions ]; then
     echo "Installing Fish-like autosuggestions for Zsh..."
