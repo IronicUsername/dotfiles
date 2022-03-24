@@ -155,6 +155,7 @@ mkcd ()
     cd -P -- "$1"
 }
 
+alias tmuxend="tmux kill-server"
 tmuxstart () {
   if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     session_priv="priv"

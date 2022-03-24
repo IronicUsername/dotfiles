@@ -13,9 +13,10 @@ $current_relative_path/zsh.sh
 
 
 echo "Installing tmux themes, addons and settings..."
-git clone https://github.com/jimeh/tmux-themepack.git $XDG_CONFIG_HOME/tmux-themepack  # todo
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm  # todo
-ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/zsh/.tmux.conf $HOME/.tmux.conf
+mv $HOME/.tmux $XDG_CONFIG_HOME/tmux
+git clone https://github.com/jimeh/tmux-themepack.git $XDG_CONFIG_HOME/tmux/tmux-themepack  # todo
+git clone https://github.com/tmux-plugins/tpm $XDG_CONFIG_HOME/tmux/plugins/tpm  # todo
+ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
 
 echo "Installing zsh plugins..."
 $current_relative_path/plugins.sh
