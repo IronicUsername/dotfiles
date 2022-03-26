@@ -80,6 +80,7 @@
     "editor.minimap.size": "fill",
     "editor.minimap.showSlider": "always",
     "editor.minimap.enabled": false,
+    "editor.wordWrap": "off",
     "editor.tokenColorCustomizations": {
         // "comments": "#66a748",  /* green */
         "comments": "#d060e9",   /* purple */
@@ -295,15 +296,16 @@
     "task.problemMatchers.neverPrompt": {
         "shell": true
     },
-    "window.zoomLevel": -0.65,
     "powermode.combo.location": "statusbar",
     "powermode.combo.counterEnabled": "default",
     "powermode.combo.timerEnabled": "hide",
     "powermode.shake.enabled": false,
     "powermode.shake.intensity": 1,
+    "debug.allowBreakpointsEverywhere": true,
+    "powershell.integratedConsole.showOnStartup": false,
+    "window.zoomLevel": -0.65,
     // "window.zoomLevel": 1.25, // screen sharring
     // "editor.guides.indentation": false,
-    // "editor.wordWrap": "off",
     // "diffEditor.wordWrap": "off",
     // "editor.inlayHints.enabled": false,
 }
