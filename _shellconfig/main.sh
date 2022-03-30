@@ -35,7 +35,6 @@ git clone https://github.com/powerline/fonts.git
 rm -rf fonts
 
 echo "Link gitconfig"
-mkdir -p $XDG_CONFIG_HOME/git
 ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/git $XDG_CONFIG_HOME/git
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
