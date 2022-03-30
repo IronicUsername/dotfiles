@@ -3,7 +3,7 @@ current_relative_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "==> Running main.sh"
 
 
-ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/zsh/zshenv $HOME/.zshenv
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/zsh/zshenv $HOME/.zshenv
 
 echo "Installing oh-my-zsh..."
 $current_relative_path/oh_my_zsh.sh
@@ -35,7 +35,8 @@ git clone https://github.com/powerline/fonts.git
 rm -rf fonts
 
 echo "Link gitconfig"
-ln -s $current_relative_path/zsh/.gitconfig $HOME/.gitconfig
+mkdir -p $XDG_CONFIG_HOME/git
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/git $XDG_CONFIG_HOME/git
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 echo "Linking inputrc"

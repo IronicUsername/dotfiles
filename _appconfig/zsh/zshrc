@@ -39,7 +39,7 @@ plugins=(
 ZSH_THEME="agnoster-custom"
 
 source $ZSH/oh-my-zsh.sh
-source $XDG_CONFIG_HOME/dotfiles/_shellconfig/.aliases
+source $XDG_CONFIG_HOME/dotfiles/_shellconfig/aliases
 source $ZSH_CUSTOM/plugins/iterm2/.iterm2_shell_integration.zsh
 
 

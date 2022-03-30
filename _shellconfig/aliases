@@ -67,7 +67,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # VS Code extension management
 alias vscode-extensions-save='code --list-extensions > ~/.config/dotfiles/_appconfig/vscode/extensions.txt && echo Done!'
-alias vscode-extensions-install='xargs -n 1 code --install-extension < ~/.config/dotfiles/_appconfig/vscode/extensions.txt'
+alias vscode-extensions-install='xargs -n 1 code --extensions-dir "$VSCODE_EXTENSIONS" --install-extension < ~/.config/dotfiles/_appconfig/vscode/extensions.txt'
 
 # ImageOptim
 alias imageoptim='open -a ImageOptim "$@"'
