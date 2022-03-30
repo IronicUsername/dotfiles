@@ -6,7 +6,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 mkdir -p $HOME/Development/{.archive,personal,notes,tools,sandbox,work/{sandbox}}
 mkdir -p $HOME/.ssh
-mkdir -p $XDG_CONFIG_HOME/{npm, vim}
+mkdir -p $XDG_CONFIG_HOME/{vim}
 mkdir -p $HOME/Music/SoundCloud/
 
 ln -s $HOME/Music/SoundCloud $HOME/Downloads/music
