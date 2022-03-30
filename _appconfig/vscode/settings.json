@@ -126,7 +126,7 @@
     },
     "powermode.enabled": true,
     "powermode.enableStatusBarComboTimer": false,
-    "python.pythonPath": "/Users/deniz/.config/pyenv/versions/3.7.5/bin/python",
+    // "python.pythonPath": "/Users/deniz/.config/pyenv/versions/3.7.5/bin/python",
     "python.languageServer": "Pylance",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.envFile": "${workspaceFolder}/backend/.env",

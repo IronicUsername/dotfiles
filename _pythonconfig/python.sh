@@ -11,19 +11,29 @@ poetry config virtualenvs.in-project true
 mkdir -p $XDG_CONFIG_HOME/zsh/custom/plugins/poetry
 poetry completions zsh > $XDG_CONFIG_HOME/zsh/custom/plugins/poetry/_poetry
 
-echo "Installing python..."
+echo "Installing python, rust & node..."
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
+export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 
-eval "$(pyenv init -)"
-export PYENV_ROOT=$XDG_CONFIG_HOME/pyenv
-export PATH="$PYENV_ROOT/shims:$PATH"
+asdf plugin-add python
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 
-PYTHON27_VERSION="2.7.18" # Needed for npm
-pyenv install "$PYTHON27_VERSION"
-echo "Python 3.6.8 ..."
-pyenv install 3.6.8
-echo "Python 3.7.5 ..."
-pyenv install 3.7.5
-echo "Python 3.9.5 ..."
-pyenv install 3.9.5
-echo "Set Python globally"
-pyenv global 3.9.5
+echo("Setting up python versions...")
+asdf install python 2.7.18
+asdf install python 3.7.13
+asdf install python 3.8.13
+asdf install python 3.9.12
+asdf install python 3.10.2
+
+echo("Set python/python3 to 3.9.12 and python2 to 2.7.18")
+asdf global python 3.9.12 2.7.18
+
+echo("Setting up nodejs versions...")
+asdf install nodejs 17.8.0
+asdf global nodejs 17.8.0
+
+echo("Setting up rust versions...")
+asdf install rust 1.59.0
+asdf global rust 1.59.0

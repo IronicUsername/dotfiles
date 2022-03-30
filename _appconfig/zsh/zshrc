@@ -23,6 +23,7 @@ HIST_STAMP="yyyy-mm-dd"
 # Plugins
 ZSH_CUSTOM="$XDG_CONFIG_HOME/zsh/custom"
 plugins=(
+    asdf
     alias-tips
     dirhistory
     fancy-ctrl-z
@@ -65,10 +66,8 @@ export PYTHONUNBUFFERED=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 
-# pyenv
-# eval "$(pyenv init -)"
-# export PYENV_ROOT=$XDG_CONFIG_HOME/pyenv
-# export PATH="$PYENV_ROOT/shims:$PATH"
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # TheFuck
 eval $(thefuck --alias)

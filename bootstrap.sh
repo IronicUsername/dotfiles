@@ -39,7 +39,7 @@ echo "Settings up apps..."
 ./_appconfig/main.sh
 
 echo "Cleanup..."
-mv -t .config .npm .nvm .tmux
+mv -t .config .npm .tmux
 rm .zcompdump*
 
 source $XDG_CONFIG_HOME/zsh/.zshrc
