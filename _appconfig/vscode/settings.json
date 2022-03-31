@@ -28,13 +28,8 @@
             "tooltip": "Live Share"
         },
         {
-            "name": "remote",
-            "codicon": "remote",
-            "tooltip": "Remote"
-        },
-        {
             "name": "extension.vscode-spotify",
-            "codicon": "ports-open-browser-icon",
+            "codicon": "pulse",
             "tooltip": "Spotify"
         },
         {
@@ -43,9 +38,15 @@
             "tooltip": "Testing",
         },
         {
-            "name": "problems",
-            "codicon": "terminal",
+            "name": "debugConsole",
+            "codicon": "debug-console",
         },
+        {
+            "name": "extension.github-pull-requests",
+            "codicon": "github",
+            "tooltip": "PRs",
+        },
+
     ],
     "activitusbar.priority":99999,
     "activitusbar.showSourceControlCounter": true,
@@ -254,11 +255,9 @@
         "panel.border": "#7a00962a",
     },
     "window.title": "${rootPath}${separator}${activeEditorShort}",
-    "workbench.sideBar.location": "left",
     "workbench.startupEditor": "none",
     "workbench.fontAliasing": "antialiased",
     "workbench.editor.showTabs": true,
-    "workbench.activityBar.visible": false,
     "zenMode.fullScreen": false,
     "zenMode.hideTabs": false,
     "zenMode.hideLineNumbers": false,
@@ -304,6 +303,8 @@
     "debug.allowBreakpointsEverywhere": true,
     "powershell.integratedConsole.showOnStartup": false,
     "window.zoomLevel": -0.65,
+    "workbench.activityBar.visible": false,
+    "workbench.layoutControl.enabled": false,
     // "window.zoomLevel": 1.25, // screen sharring
     // "editor.guides.indentation": false,
     // "diffEditor.wordWrap": "off",

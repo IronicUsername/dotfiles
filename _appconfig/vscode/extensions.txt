@@ -7,6 +7,7 @@ eamodio.gitlens
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
+GitHub.vscode-pull-request-github
 Gruntfuggly.activitusbar
 heyimfuzz.banner-comments
 HookyQR.beautify
@@ -33,4 +34,5 @@ shd101wyy.markdown-preview-enhanced
 shyykoserhiy.vscode-spotify
 syler.sass-indented
 vadimcn.vscode-lldb
+vscodevim.vim
 yo1dog.cursor-align

@@ -20,20 +20,27 @@ asdf plugin-add python
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 
-echo("Setting up python versions...")
+echo "Setting up python versions..."
 asdf install python 2.7.18
 asdf install python 3.7.13
 asdf install python 3.8.13
 asdf install python 3.9.12
 asdf install python 3.10.2
 
-echo("Set python/python3 to 3.9.12 and python2 to 2.7.18")
+echo "Set python/python3 to 3.9.12 and python2 to 2.7.18"
 asdf global python 3.9.12 2.7.18
 
-echo("Setting up nodejs versions...")
-asdf install nodejs 17.8.0
-asdf global nodejs 17.8.0
+echo "Setting up nodejs versions..."
+echo "Get LTS version..."
+node_lts=$(wget -q https://nodejs.org/en/download/ -O - | tr '\n' ' ' | grep -o '<strong>.*</strong>' | sed -e 's/<[^>]*>//g')
+node_current=$(wget -q https://nodejs.org/en/download/current/ -O - | tr '\n' ' ' | grep -o '<strong>.*</strong>' | sed -e 's/<[^>]*>//g')
 
-echo("Setting up rust versions...")
+asdf install nodejs $node_lts
+asdf install nodejs $node_current
+
+echo "Setting LTS version $node_lts as global."
+asdf global nodejs $node_lts
+
+echo "Setting up rust versions..."
 asdf install rust 1.59.0
 asdf global rust 1.59.0
