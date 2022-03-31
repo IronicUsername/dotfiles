@@ -49,7 +49,7 @@
     ],
     "activitusbar.priority":99999,
     "activitusbar.showSourceControlCounter": true,
-    "autoDocstring.customTemplatePath": "/Users/deniz/.personal/dotfiles/vscode/.mustache",
+    "autoDocstring.customTemplatePath": "$XDG_CONFIG_HOME/dotfiles/_appconfig/vscode/.mustache",
     "background.enabled": false,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
