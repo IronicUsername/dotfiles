@@ -33,3 +33,6 @@ home/.bin/sops
 # iterm
 _appconfig/iterm/*
 !_appconfig/iterm/com.googlecode.iterm2.plist
+
+# error
+poetry-installer-error-*

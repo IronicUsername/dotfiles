@@ -8,7 +8,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wgetrc"
 mkdir -p $HOME/Development/{.archive,personal,notes,tools,sandbox,work/{sandbox}}
 mkdir -p $HOME/.ssh
-mkdir -p $XDG_CONFIG_HOME/{vim}
+mkdir -p $XDG_CONFIG_HOME/{vim,npm,zsh}
 mkdir -p $HOME/Music/SoundCloud/
 
 ln -s $HOME/Music/SoundCloud $HOME/Downloads/music
@@ -42,7 +42,8 @@ echo "Settings up apps..."
 
 echo "Cleanup..."
 mv -t .config .npm .tmux
-rm .zcompdump*
+rm $HOME/.zcompdump*
+rm $HOME/.zshrc
 
 source $XDG_CONFIG_HOME/zsh/.zshrc
 echo "Done, enjoy :) (like i enjoyed your mom)"
