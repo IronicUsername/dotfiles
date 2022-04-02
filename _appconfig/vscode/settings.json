@@ -302,7 +302,7 @@
     "powermode.shake.intensity": 1,
     "debug.allowBreakpointsEverywhere": true,
     "powershell.integratedConsole.showOnStartup": false,
-    "window.zoomLevel": -0.65,
+    "window.zoomLevel": -0.95,
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
     // "window.zoomLevel": 1.25, // screen sharring
