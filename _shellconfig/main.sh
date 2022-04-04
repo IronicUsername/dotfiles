@@ -11,6 +11,8 @@ $current_relative_path/oh_my_zsh.sh
 echo "Setting up zsh..."
 $current_relative_path/zsh.sh
 
+echo "Setting up nVim..."
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/nvim $XDG_CONFIG_HOME/nvim
 
 echo "Installing tmux themes, addons and settings..."
 mv $HOME/.tmux $XDG_CONFIG_HOME/tmux

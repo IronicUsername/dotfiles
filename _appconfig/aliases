@@ -14,8 +14,8 @@ alias secret="aws-vault exec deniz-toma -- chamber"
 # Shortcuts
 alias dotfiles="cd ~/.config/dotfiles"
 alias ipy="ipython"
-alias clirm='clear && echo -en "\e[3J"'
-alias clire='clirm && exec $SHELL'
+alias cls='clear && echo -en "\e[3J"'
+alias clr='exec $SHELL'
 alias pt='pytest --no-cov -x'
 alias sv='source .venv/bin/activate'
 alias fml='flake8 . && mypy . && pydocstyle .'
