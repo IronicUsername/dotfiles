@@ -23,6 +23,7 @@ $current_relative_path/plugins.sh
 ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/zsh/install.sh $XDG_CONFIG_HOME/zsh/install.sh
 
 echo "Installing iTerm2 Shell Integration..."
+mkdir -p $XDG_CONFIG_HOME/zsh/custom/plugins/iterm2
 curl -sL https://iterm2.com/shell_integration/zsh > $XDG_CONFIG_HOME/zsh/custom/plugins/iterm2/.iterm2_shell_integration.zsh
 ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/iterm/ $XDG_CONFIG_HOME/iterm2  # todo
 

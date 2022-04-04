@@ -40,7 +40,7 @@ plugins=(
 ZSH_THEME="agnoster-custom"
 
 source $ZSH/oh-my-zsh.sh
-source $XDG_CONFIG_HOME/dotfiles/_shellconfig/aliases
+source $XDG_CONFIG_HOME/dotfiles/_appconfig/aliases
 source $ZSH_CUSTOM/plugins/iterm2/.iterm2_shell_integration.zsh
 
 
@@ -80,8 +80,8 @@ macos_version=$(sw_vers | grep "ProductVersion" | sed -e 's/ProductVersion://g' 
 #     ./_unixconfig/main.sh
 # fi
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh  # macos 12.3
-. /usr/local/opt/asdf/libexec/asdf.sh # macos <12.3
+. /opt/homebrew/opt/asdf/libexec/asdf.sh #2> /dev/null # macos 12.3
+. /usr/local/opt/asdf/libexec/asdf.sh #2> /dev/null # macos <12.3
 
 
 # TheFuck
