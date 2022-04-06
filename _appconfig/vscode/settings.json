@@ -50,7 +50,6 @@
     ],
     "activitusbar.priority":99999,
     "activitusbar.showSourceControlCounter": true,
-    "autoDocstring.customTemplatePath": "$XDG_CONFIG_HOME/dotfiles/_appconfig/vscode/.mustache",
     "background.enabled": false,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
@@ -125,8 +124,6 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "powermode.enabled": true,
-    "powermode.enableStatusBarComboTimer": false,
     // "python.pythonPath": "/Users/deniz/.config/pyenv/versions/3.7.5/bin/python",
     "python.languageServer": "Pylance",
     "python.terminal.activateEnvInCurrentTerminal": true,
@@ -175,6 +172,7 @@
         "editorOverviewRuler.background": "#00000000",
         "editorHoverWidget.background": "#0d1117",
         "editorHoverWidget.border": "#7a009655",
+        "editorGutter.commentRangeForeground": "#7a0096",
         "editorGutter.foldingControlForeground": "#009cfe",
         "editorGutter.addedBackground": "#1ac66a",
         "editorGutter.deletedBackground": "#fb1911",
@@ -213,7 +211,7 @@
         "peekViewResult.background": "#0d1117",
         // Side Bar
         "sideBar.background": "#0d1117",
-        // "sideBar.border": "#7a009633",
+        "sideBar.border": "#7a009633",
         "sideBar.foreground": "#c9d1d9",
         "sideBarTitle.foreground": "#ffffff55",
         "sideBarSectionHeader.background": "#7a009622",
@@ -295,16 +293,12 @@
     "task.problemMatchers.neverPrompt": {
         "shell": true
     },
-    "powermode.combo.location": "statusbar",
-    "powermode.combo.counterEnabled": "default",
-    "powermode.combo.timerEnabled": "hide",
-    "powermode.shake.enabled": false,
-    "powermode.shake.intensity": 1,
     "debug.allowBreakpointsEverywhere": true,
-    "powershell.integratedConsole.showOnStartup": false,
     "window.zoomLevel": -0.65,
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
+    "githubPullRequests.commentExpandState": "expandUnresolved",
+    "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache"
     // "window.zoomLevel": 1.25, // screen sharring
     // "editor.guides.indentation": false,
     // "diffEditor.wordWrap": "off",

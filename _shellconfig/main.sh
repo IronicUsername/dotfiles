@@ -2,17 +2,28 @@
 current_relative_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "==> Running main.sh"
 
-
+echo "Linking stuff"
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/aws $XDG_CONFIG_HOME/aws
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/python $XDG_CONFIG_HOME/python
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/sc-im $XDG_CONFIG_HOME/sc-im
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/vim/vimrc $XDG_CONFIG_HOME/vim/vimrc
 ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/zsh/zshenv $HOME/.zshenv
+
+echo "Setting up nVim..."
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/nvim $XDG_CONFIG_HOME/nvim
+
+echo "Link gitconfig"
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/git $XDG_CONFIG_HOME/git
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+
+echo "Linking inputrc"
+ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/readline $XDG_CONFIG_HOME/
 
 echo "Installing oh-my-zsh..."
 $current_relative_path/oh_my_zsh.sh
 
 echo "Setting up zsh..."
 $current_relative_path/zsh.sh
-
-echo "Setting up nVim..."
-ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/nvim $XDG_CONFIG_HOME/nvim
 
 echo "Installing tmux themes, addons and settings..."
 mv $HOME/.tmux $XDG_CONFIG_HOME/tmux
@@ -36,10 +47,3 @@ git clone https://github.com/powerline/fonts.git
     ./install.sh
 )
 rm -rf fonts
-
-echo "Link gitconfig"
-ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/git $XDG_CONFIG_HOME/git
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-
-echo "Linking inputrc"
-ln -s $XDG_CONFIG_HOME/dotfiles/_shellconfig/readline $XDG_CONFIG_HOME/

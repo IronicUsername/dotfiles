@@ -5,7 +5,7 @@ echo "Creating personal folder structure..."
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wgetrc"
+echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wget/wgetrc"
 mkdir -p $HOME/Development/{.archive,personal,notes,tools,sandbox,work}
 mkdir -p $HOME/.ssh
 mkdir -p $XDG_CONFIG_HOME/{vim,npm,zsh}
