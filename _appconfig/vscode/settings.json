@@ -57,7 +57,6 @@
         "pytest",
         "uvicorn"
     ],
-    "cSpell.diagnosticLevel": "Hint",
     "banner-comments.h3": "3D Diagonal",
     "debug.console.fontFamily": "Inconsolata for Powerline",
     "debug.console.fontSize": 14,
@@ -298,7 +297,8 @@
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
     "githubPullRequests.commentExpandState": "expandUnresolved",
-    "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache"
+    "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache",
+    "cSpell.diagnosticLevel": "Hint"
     // "window.zoomLevel": 1.25, // screen sharring
     // "editor.guides.indentation": false,
     // "diffEditor.wordWrap": "off",

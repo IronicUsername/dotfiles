@@ -29,9 +29,12 @@ octref.vetur
 oderwat.indent-rainbow
 oliversturm.fix-json
 PKief.material-icon-theme
+ruiquelhas.vscode-uppercase
 Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 shyykoserhiy.vscode-spotify
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-german
 syler.sass-indented
 vadimcn.vscode-lldb
 vscodevim.vim
