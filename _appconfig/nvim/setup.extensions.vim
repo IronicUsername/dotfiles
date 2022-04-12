@@ -53,7 +53,7 @@ call plug#begin()
   Plug 'folke/zen-mode.nvim'
   Plug 'Mofiqul/dracula.nvim'
   Plug 'morhetz/gruvbox'
-  Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
+  Plug 'junegunn/fzf', {'dir': '$XDG_CONFIG_HOME/nvim/_data/.fzf', 'do': './install -all'}
   Plug 'junegunn/fzf.vim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'ryanoasis/vim-devicons'
