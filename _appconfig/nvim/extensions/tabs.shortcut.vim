@@ -19,7 +19,8 @@ nnoremap <silent>    <A-9> :BufferLast<CR>
 " Pin/unpin buffer
 nnoremap <silent>    <A-p> :BufferPin<CR>
 " Close buffer
-nnoremap <silent>    <Space>q :BufferClose<CR>
+nnoremap <silent>    <Space>q :BufferClose<CR><bar> q<CR>
+nnoremap <silent>    <Space>wp :BufferClose<CR><bar> wq<CR>
 " Wipeout buffer
 "                          :BufferWipeout<CR>
 " Close commands

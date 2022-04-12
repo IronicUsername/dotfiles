@@ -1,6 +1,5 @@
 set autoread
 
-
 source $XDG_CONFIG_HOME/nvim/setup.extensions.vim
 source $XDG_CONFIG_HOME/nvim/setup.default.params.vim
 
