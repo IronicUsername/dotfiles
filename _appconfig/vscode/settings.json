@@ -51,7 +51,7 @@
     "activitusbar.priority":99999,
     "activitusbar.showSourceControlCounter": true,
     "background.enabled": false,
-    "cSpell.language": "en,de",
+    "cSpell.language": "en,de,en-US",
     "cSpell.userWords": [
         "pydantic",
         "pytest",
