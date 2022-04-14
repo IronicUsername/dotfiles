@@ -293,11 +293,11 @@
         "shell": true
     },
     "debug.allowBreakpointsEverywhere": true,
-    // "window.zoomLevel": -0.65,
-    "window.zoomLevel": -0.3, // when on 2k monitor
+    "window.zoomLevel": -0.65,
+    // "window.zoomLevel": -0.4, // when on 2k monitor
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
-    "githubPullRequests.commentExpandState": "expandUnresolved",
+    "githubPullRequests.commentExpandState": "collapseAll",
     "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache",
     "cSpell.diagnosticLevel": "Hint"
     // "window.zoomLevel": 1.25, // screen sharring
