@@ -69,7 +69,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # asdf
 macos_version=$(sw_vers | grep "ProductVersion" | sed -e 's/ProductVersion://g' | xargs)
-# if [[ "$OSTYPE" == "darwin"* ]]; then
+ if [[ "$OSTYPE" == "darwin"* ]]; then
+    . /opt/homebrew/opt/asdf/libexec/asdf.sh 2> /dev/null # macos 12.3
+    . /usr/local/opt/asdf/libexec/asdf.sh 2> /dev/null # macos <12.3
 #     if [[$macos_version]]; then
 #     else
 #     fi
@@ -78,10 +80,7 @@ macos_version=$(sw_vers | grep "ProductVersion" | sed -e 's/ProductVersion://g' 
 # else
 #     echo "Continuing with linux/unix steps..."
 #     ./_unixconfig/main.sh
-# fi
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh #2> /dev/null # macos 12.3
-. /usr/local/opt/asdf/libexec/asdf.sh #2> /dev/null # macos <12.3
+ fi
 
 
 # TheFuck
