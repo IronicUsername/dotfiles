@@ -298,10 +298,10 @@
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
     "githubPullRequests.commentExpandState": "collapseAll",
+    "githubPullRequests.focusedMode": true,
+    "comments.openView": "never",
+    "comments.useRelativeTime": false,
     "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache",
-    "cSpell.diagnosticLevel": "Hint"
-    // "window.zoomLevel": 1.25, // screen sharring
-    // "editor.guides.indentation": false,
-    // "diffEditor.wordWrap": "off",
-    // "editor.inlayHints.enabled": false,
+    "cSpell.diagnosticLevel": "Hint",
+    "debug.internalConsoleOptions":"neverOpen",
 }
