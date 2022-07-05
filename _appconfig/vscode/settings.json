@@ -1,8 +1,7 @@
 {
     "update.mode": "start",
     "telemetry.telemetryLevel": "off",
-    "activitusbar.views": [
-        {
+    "activitusbar.views": [{
             "name": "explorer",
             "codicon": "explorer-view-icon"
         },
@@ -48,13 +47,20 @@
         },
 
     ],
-    "activitusbar.priority":99999,
+    "activitusbar.priority": 99999,
     "activitusbar.showSourceControlCounter": true,
     "background.enabled": false,
     "cSpell.language": "en,de,en-US",
     "cSpell.userWords": [
+        "dbsession",
+        "fastapi",
+        "nullable",
+        "postgresql",
         "pydantic",
         "pytest",
+        "sessionmaker",
+        "sqlalchemy",
+        "starlette",
         "uvicorn"
     ],
     "banner-comments.h3": "3D Diagonal",
@@ -82,7 +88,8 @@
     "editor.wordWrap": "off",
     "editor.tokenColorCustomizations": {
         // "comments": "#66a748",  /* green */
-        "comments": "#d060e9",   /* purple */
+        "comments": "#d060e9",
+        /* purple */
         "keywords": "#ab5ea6",
         "functions": "#bbbb7d",
         "variables": "#8ebfdb",
@@ -303,5 +310,6 @@
     "comments.useRelativeTime": false,
     "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache",
     "cSpell.diagnosticLevel": "Hint",
-    "debug.internalConsoleOptions":"neverOpen",
+    "debug.internalConsoleOptions": "neverOpen",
+    "editor.formatOnSave": true,
 }
