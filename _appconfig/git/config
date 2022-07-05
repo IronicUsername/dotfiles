@@ -1,12 +1,19 @@
 [user]
   name = IronicUsername
   email = github@trash-economy.io
+  signingkey = github@trash-economy.io
 
 [core]
   excludesfile = ~/.gitignore
   quotepath = false
 	autocrlf = input
 	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[commit]
+	gpgsign = true
+
+[tag]
+  gpgSign = true
 
 [color]
   interactive = true
@@ -48,3 +55,5 @@
 	trustExitCode = true
 [init]
 	defaultBranch = master
+[gpg]
+	program = gpg
