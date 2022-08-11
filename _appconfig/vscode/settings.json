@@ -312,4 +312,5 @@
     "cSpell.diagnosticLevel": "Hint",
     "debug.internalConsoleOptions": "neverOpen",
     "editor.formatOnSave": true,
+    "npm.keybindingsChangedWarningShown": true,
 }

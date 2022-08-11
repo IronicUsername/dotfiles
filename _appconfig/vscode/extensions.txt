@@ -13,7 +13,6 @@ heyimfuzz.banner-comments
 HookyQR.beautify
 JPTarquino.postgresql
 karigari.chat
-matklad.rust-analyzer
 ms-azuretools.vscode-docker
 ms-python.python
 ms-python.vscode-pylance
@@ -23,6 +22,7 @@ ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode.hexeditor
+ms-vscode.vscode-typescript-next
 ms-vsliveshare.vsliveshare
 naumovs.color-highlight
 njpwerner.autodocstring
@@ -31,6 +31,7 @@ oderwat.indent-rainbow
 oliversturm.fix-json
 PKief.material-icon-theme
 ruiquelhas.vscode-uppercase
+rust-lang.rust-analyzer
 Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 shyykoserhiy.vscode-spotify

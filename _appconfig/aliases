@@ -31,6 +31,7 @@ alias topfiles="du -a $1 | sort -n -r | head -n 20"
 alias scim="sc-im"
 alias v="nvim"
 alias messy="ls -a $HOME | wc -l"
+alias matrix="cmatrix -b -C magenta -a"
 
 # Python versions
 alias py3.8="/opt/homebrew/opt/python@3.8/bin/python3"
@@ -179,6 +180,18 @@ tmuxstart () {
 
   fi
   tmux a -t "priv":0
+}
+tmuxidle (){
+    session_idle="idle"
+    tmux has-session -t $session_idle 2>/dev/null
+    if [ $? != 0 ]; then
+      tmux new-session -d -A -s "idle" -c "$HOME"
+      tmux send-keys -t 0 "matrix" Enter
+      tmux splitw -vh -p 50 -t "idle" -c "$HOME/"
+      tmux send-keys -t 1 "asciiquarium" Enter
+      tmux select-pane -t 0
+    fi
+    tmux a -t "idle":0
 }
 
 pinchelin () {
