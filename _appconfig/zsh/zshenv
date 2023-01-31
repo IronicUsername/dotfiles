@@ -13,6 +13,9 @@ export _Z_DATA="$XDG_DATA_HOME/z"
 export MACHINE_STORAGE_PATH="$XDG_DATA_HOME/docker-machine"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm/.nvm"
+export YARN_CONFIG_HOME="$XDG_CONFIG_HOME/yarn/config"
+
 
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"

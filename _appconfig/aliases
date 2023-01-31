@@ -10,11 +10,13 @@ alias sudo='sudo '
 
 # Work
 alias secret="aws-vault exec deniz-toma -- chamber"
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # Shortcuts
 alias dotfiles="cd ~/.config/dotfiles"
 alias ipy="ipython"
 alias clirm='clear && echo -en "\e[3J"'
+alias cls='clear && echo -en "\e[3J"'
 alias clire='exec $SHELL'
 alias pt='pytest --no-cov -x'
 alias sv='source .venv/bin/activate'

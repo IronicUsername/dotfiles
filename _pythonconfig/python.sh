@@ -23,6 +23,7 @@ asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 
 echo "Setting up python versions..."
 asdf install python 2.7.18
+asdf install python 3.6.15
 asdf install python 3.7.13
 asdf install python 3.8.13
 asdf install python 3.9.12
