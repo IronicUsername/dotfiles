@@ -89,6 +89,7 @@
     "editor.cursorBlinking": "solid",
     "editor.fontSize": 14,
     "editor.mouseWheelZoom": false,
+    "editor.insertSpaces": true,
     "editor.inlayHints.fontFamily": "Inconsolata",
     "editor.codeLensFontFamily": "Inconsolata",
     "editor.minimap.size": "fill",

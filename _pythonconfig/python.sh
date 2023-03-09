@@ -27,10 +27,11 @@ asdf install python 3.6.15
 asdf install python 3.7.13
 asdf install python 3.8.13
 asdf install python 3.9.12
-asdf install python 3.10.2
+asdf install python 3.10.9
+asdf install python 3.11.2
 
 echo "Set python/python3 to 3.9.12 and python2 to 2.7.18"
-asdf global python 3.9.12 2.7.18
+asdf global python 3.10.9 2.7.18
 
 echo "Setting up nodejs versions..."
 echo "Get LTS version..."

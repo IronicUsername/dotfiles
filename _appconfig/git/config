@@ -6,11 +6,11 @@
 [core]
   excludesfile = ~/.gitignore
   quotepath = false
-	autocrlf = input
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    autocrlf = input
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 [commit]
-	gpgsign = true
+    gpgsign = true
 
 [tag]
   gpgSign = true
@@ -41,19 +41,21 @@
   delete-merged-branches = !git branch --merged master | grep -v -e 'master' -e '\\*' | xargs -n 1 git branch -d && git remote prune origin
 
 [credential]
-	helper = osxkeychain
+    helper = gnome-keyring  # NOTE: varrying from OS; should be configured when bootstraping system
+    # NOTE: OG / OSX setting
+    # helper = osxkeychain
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [init]
-	defaultBranch = master
+    defaultBranch = master
 [gpg]
-	program = gpg
+    program = gpg
