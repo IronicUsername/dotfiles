@@ -84,7 +84,7 @@
     "editor.scrollbar.verticalScrollbarSize": 8,
     "editor.fontFamily": "Inconsolata",
     "editor.minimap.maxColumn": 100,
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "off",
     "editor.suggestSelection": "first",
     "editor.cursorBlinking": "solid",
     "editor.fontSize": 14,
@@ -268,7 +268,6 @@
         "panel.border": "#7a00962a",
     },
     "window.title": "${rootPath}${separator}${activeEditorShort}",
-    "workbench.startupEditor": "none",
     "workbench.fontAliasing": "antialiased",
     "workbench.editor.showTabs": true,
     "zenMode.fullScreen": false,
@@ -336,4 +335,6 @@
     "typescript.inlayHints.variableTypes.enabled": true,
     "githubPullRequests.pullBranch": "never",
     "editor.formatOnSave": true,
+    "workbench.startupEditor": "none",
+    "editor.detectIndentation": false,
 }
