@@ -36,3 +36,8 @@ _appconfig/iterm/*
 
 # error
 poetry-installer-error-*
+
+# nvim packages
+_appconfig/nvim/_data
+_appconfig/nvim/_data/*
+_appconfig/nvim/vim_session
