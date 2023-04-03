@@ -31,6 +31,9 @@ ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/vscode/snippets /Applications/code-po
 
 symlinkFilesTo vscode "${HOME}/Library/Application Support/Code/User"
 
+# Alacritty
+> ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/alacritty $XDG_CONFIG_HOME/alacritty
+
 # Unset
 unset getFilesInDir
 unset symlinkFilesTo

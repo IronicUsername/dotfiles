@@ -56,6 +56,7 @@
         "calclidator",
         "dbsession",
         "fastapi",
+        "github",
         "httpx",
         "mscons",
         "msconses",
@@ -308,7 +309,6 @@
         "shell": true
     },
     "debug.allowBreakpointsEverywhere": true,
-    "window.zoomLevel": -0.65,
     // "window.zoomLevel": -0.4, // when on 2k monitor
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
@@ -337,4 +337,6 @@
     "editor.formatOnSave": true,
     "workbench.startupEditor": "none",
     "editor.detectIndentation": false,
+    "sync.removeExtensions": false,
+    "window.zoomLevel": -0.65,
 }

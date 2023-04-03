@@ -27,7 +27,8 @@ dockutil --remove all --no-restart
 dockutil --add /Applications/Visual\ Studio\ Code.app --no-restart
 dockutil --add /System/Applications/Mail.app --after Visual\ Studio\ Code --no-restart
 dockutil --add /Applications/iTerm.app --after Mail --no-restart
-dockutil --add /Applications/Firefox.app --after iTerm --no-restart
+dockutil --add /Applications/Alacritty.app --after iTerm --no-restart
+dockutil --add /Applications/Firefox.app --after Alacritty --no-restart
 dockutil --add /Applications/Chromium.app --after Firefox --no-restart
 dockutil --add /Applications/Slack.app --after Chromium --no-restart
 dockutil --add /Applications/Spotify.app --after Slack --no-restart

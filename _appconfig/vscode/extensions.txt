@@ -24,6 +24,7 @@ ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-wsl
 ms-vscode.hexeditor
 ms-vscode.remote-explorer
 ms-vsliveshare.vsliveshare

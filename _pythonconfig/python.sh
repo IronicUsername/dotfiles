@@ -1,16 +1,6 @@
 #!/bin/bash
 echo "==> Running python.sh"
 
-echo "Installing and setting up poetry..."
-curl -sSL https://install.python-poetry.org | POETRY_HOME=$XDG_CONFIG_HOME/poetry python3 -
-
-export PATH="$XDG_CONFIG_HOME/poetry/bin:$PATH"
-poetry completions zsh > $XDG_CONFIG_HOME/zsh/completions/_poetry
-poetry config virtualenvs.in-project true
-
-mkdir -p $XDG_CONFIG_HOME/zsh/custom/plugins/poetry
-poetry completions zsh > $XDG_CONFIG_HOME/zsh/custom/plugins/poetry/_poetry
-
 echo "Installing python, rust & node..."
 . /opt/homebrew/opt/asdf/libexec/asdf.sh  # macos 12.3
 . /usr/local/opt/asdf/libexec/asdf.sh # macos <12.3
@@ -46,3 +36,13 @@ asdf global nodejs $node_lts
 echo "Setting up rust versions..."
 asdf install rust 1.59.0
 asdf global rust 1.59.0
+
+echo "Installing and setting up poetry..."
+curl -sSL https://install.python-poetry.org | POETRY_HOME=$XDG_CONFIG_HOME/poetry python -
+
+export PATH="$XDG_CONFIG_HOME/poetry/bin:$PATH"
+poetry completions zsh > $XDG_CONFIG_HOME/zsh/completions/_poetry
+poetry config virtualenvs.in-project true
+
+mkdir -p $XDG_CONFIG_HOME/zsh/custom/plugins/poetry
+poetry completions zsh > $XDG_CONFIG_HOME/zsh/custom/plugins/poetry/_poetry
