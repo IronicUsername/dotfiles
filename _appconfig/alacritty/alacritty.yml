@@ -10,7 +10,7 @@ window:
   decorations: buttonless
   startup_mode: Maximized
 
-alt_send_esc: true
+window.option_al_alt: true
 ctrl_send_esc: true
 # Colors (iTerm 2 default theme)
 colors:
