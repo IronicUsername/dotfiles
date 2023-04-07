@@ -2,6 +2,10 @@
 my stuff for mac.
 
 ## prerequisites
+
+### zsh
+
+Install ZSH as default shell on system before beginning lol.
 ### xcode-cli
 before running the script, install the xcode command line tools.
 ```

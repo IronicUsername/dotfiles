@@ -5,11 +5,12 @@ echo "Creating personal folder structure..."
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wget/wgetrc"
 mkdir -p $HOME/Development/{.archive,personal,notes,tools,sandbox,work}
 mkdir -p $HOME/.ssh
-mkdir -p $XDG_CONFIG_HOME/{vim,zsh}
+mkdir -p $XDG_CONFIG_HOME/{tmux,vim,zsh}
 mkdir -p $HOME/Music/SoundCloud/
+mkdir -p $XDG_CONFIG_HOME/wget
+echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME/wget/wgetrc"
 
 ln -s $HOME/Music/SoundCloud $HOME/Downloads/music
 
@@ -18,7 +19,7 @@ git clone https://github.com/IronicUsername/dotfiles.git $XDG_CONFIG_HOME/dotfil
 
 echo "Switch2dotfiles folder..."
 cd $XDG_CONFIG_HOME/dotfiles
-ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/npm$XDG_CONFIG_HOME/npm
+ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/npm $XDG_CONFIG_HOME/npm
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Detected Mac OSX system. Continuing with macconfig..."
