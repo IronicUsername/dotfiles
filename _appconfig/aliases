@@ -9,7 +9,8 @@ alias gopers='cd ~/Development/personal/'
 alias sudo='sudo '
 
 # Work
-alias secret="aws-vault exec deniz-toma -- chamber"
+# alias secret="aws-vault exec deniz-toma -- chamber" # sidestream
+alias secret="aws-vault exec deniz_impuls -- chamber"
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # Shortcuts

@@ -10,6 +10,7 @@ export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 asdf plugin-add python
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 
 echo "Setting up python versions..."
 asdf install python 2.7.18
@@ -20,7 +21,7 @@ asdf install python 3.9.12
 asdf install python 3.10.2
 
 echo "Set python/python3 to 3.9.12 and python2 to 2.7.18"
-asdf global python 3.9.12 2.7.18
+asdf global python 3.10.2 2.7.18
 
 echo "Setting up nodejs versions..."
 echo "Get LTS version..."
@@ -36,6 +37,11 @@ asdf global nodejs $node_lts
 echo "Setting up rust versions..."
 asdf install rust 1.59.0
 asdf global rust 1.59.0
+
+
+echo "Setting up go versions..."
+asdf install golang 1.20.2
+asdf global rust 1.20.2
 
 echo "Installing and setting up poetry..."
 curl -sSL https://install.python-poetry.org | POETRY_HOME=$XDG_CONFIG_HOME/poetry python -

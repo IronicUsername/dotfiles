@@ -54,6 +54,7 @@
     "cSpell.userWords": [
         "biko",
         "calclidator",
+        "dataclass",
         "dbsession",
         "fastapi",
         "github",
@@ -135,6 +136,9 @@
         "rgba(0,156,255,0.07)",
     ],
     "material-icon-theme.showWelcomeMessage": false,
+    "[markdown]": {
+        "editor.formatOnSave": false,
+    },
     "markdown-preview-enhanced.liveUpdate": false,
     "notebook.cellToolbarLocation": {
         "default": "right",
