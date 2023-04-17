@@ -10,7 +10,9 @@ ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/vim/vimrc $XDG_CONFIG_HOME/vim/vimrc
 ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/zsh/zshenv $HOME/.zshenv
 
 echo "Setting up nVim..."
-ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/nvim $XDG_CONFIG_HOME/nvim
+echo "TODO"
+# git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+# ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/nvim $XDG_CONFIG_HOME/nvim
 
 echo "Link gitconfig"
 ln -s $XDG_CONFIG_HOME/dotfiles/_appconfig/git $XDG_CONFIG_HOME/git

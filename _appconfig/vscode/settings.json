@@ -343,4 +343,6 @@
     "editor.detectIndentation": false,
     "sync.removeExtensions": false,
     "window.zoomLevel": -0.65,
+    "svelte.enable-ts-plugin": true,
+    "playwright.reuseBrowser": true,
 }

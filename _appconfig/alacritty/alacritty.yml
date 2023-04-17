@@ -3,7 +3,8 @@ env:
   TERM: "xterm-256color"
 font:
   normal:
-    family: Inconsolata for Powerline
+    # family: Inconsolata for Powerline
+    family: Inconsolata Nerd Font
   size: 13
 
 window:
