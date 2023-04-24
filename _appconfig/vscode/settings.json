@@ -74,7 +74,7 @@
         "typer",
         "uvicorn"
     ],
-    "banner-comments.h3": "3-D",
+    "banner-comments.h3": "DOS Rebel",
     "debug.console.fontFamily": "Inconsolata for Powerline",
     "debug.console.fontSize": 14,
     "debug.toolBarLocation": "floating",
@@ -324,7 +324,7 @@
     "debug.internalConsoleOptions": "neverOpen",
     "npm.keybindingsChangedWarningShown": true,
     "banner-comments.h2": "4Max",
-    "banner-comments.h1": "Digital",
+    "banner-comments.h1": "DOS Rebel",
     "vitest.enable": true,
     "vitest.commandLine": "vitest --",
     "cSpell.diagnosticLevel": "Hint",
