@@ -1,0 +1,69 @@
+{
+    "id": "cw_n3jb7",
+    "label": "Modern Dolch modified",
+    "manufacturer": "",
+    "swatches": {
+        "base": {
+            "background": "#0d1117",
+            "color": "#393b3b"
+        },
+        "mods": {
+            "background": "#7a0096",
+            "color": "#b313d9"
+        },
+        "accent": {
+            "background": "#7a0096",
+            "color": "#b313d9"
+        },
+        "swatch-1": {
+            "background": "#126392",
+            "color": "#0080d1"
+        },
+        "swatch-2": {
+            "background": "#0d1117",
+            "color": "#7a0096"
+        },
+        "swatch-3": {
+            "background": "#0d1117",
+            "color": "#126392"
+        },
+        "swatch-4": {
+            "background": "#0d1117",
+            "color": "#0080d1"
+        }
+    },
+    "override": {
+        "KC_SPC": "mods",
+        "KC_PENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F6": "swatch-4",
+        "KC_F7": "swatch-4",
+        "KC_F8": "swatch-4",
+        "KC_LEFT": "swatch-1",
+        "KC_RGHT": "swatch-1",
+        "KC_F5": "swatch-4",
+        "KC_INS": "swatch-1",
+        "KC_TAB": "swatch-2",
+        "KC_CAPS": "swatch-2",
+        "KC_LSFT": "swatch-2",
+        "KC_LCTL": "swatch-2",
+        "KC_LGUI": "swatch-2",
+        "KC_LALT": "swatch-2",
+        "KC_RALT": "swatch-2",
+        "KC_RGUI": "swatch-2",
+        "KC_APP": "swatch-2",
+        "KC_RCTL": "swatch-2",
+        "KC_RSFT": "swatch-2",
+        "KC_ENT": "accent",
+        "KC_BSPC": "swatch-2",
+        "KC_F1": "swatch-3",
+        "KC_F2": "swatch-3",
+        "KC_F3": "swatch-3",
+        "KC_F4": "swatch-3",
+        "KC_F9": "swatch-3",
+        "KC_F10": "swatch-3",
+        "KC_F11": "swatch-3",
+        "KC_F12": "swatch-3"
+    }
+}
