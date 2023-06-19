@@ -56,18 +56,25 @@
         "calclidator",
         "dataclass",
         "dbsession",
+        "emsys",
+        "Epex",
+        "erisk",
         "fastapi",
+        "germany",
         "github",
         "httpx",
+        "impuls",
         "mscons",
         "msconses",
         "nullable",
+        "openpyxl",
         "postgres",
         "postgresql",
         "pydantic",
         "pytest",
         "respx",
         "sessionmaker",
+        "sharepoint",
         "smth",
         "sqlalchemy",
         "starlette",
@@ -106,7 +113,21 @@
         "variables": "#8ebfdb",
         "types": "#44caaf",
         "strings": "#d09983",
-        "numbers": "#9fc38d"
+        "numbers": "#9fc38d",
+        "[*]": {
+            "textMateRules": [
+                {
+                    "name": "Docstrings",
+                    "scope": "string.quoted.docstring",
+                    "settings": {
+                        // original orange
+                        // "foreground": "#CE9178  "
+                        "foreground": "#d09983"
+                    }
+                }
+            ]
+        }
+
     },
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
@@ -312,12 +333,11 @@
     "task.problemMatchers.neverPrompt": {
         "shell": true
     },
-    "debug.allowBreakpointsEverywhere": true,
     // "window.zoomLevel": -0.4, // when on 2k monitor
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
     "githubPullRequests.commentExpandState": "collapseAll",
-    "githubPullRequests.focusedMode": true,
+    // "githubPullRequests.focusedMode": true,
     "comments.openView": "never",
     "comments.useRelativeTime": false,
     "autoDocstring.customTemplatePath": "/Users/deniz/.config/dotfiles/_appconfig/vscode/.mustache",
@@ -342,7 +362,13 @@
     "workbench.startupEditor": "none",
     "editor.detectIndentation": false,
     "sync.removeExtensions": false,
-    "window.zoomLevel": -0.65,
     "svelte.enable-ts-plugin": true,
     "playwright.reuseBrowser": true,
+    "terminal.integrated.tabFocusMode": false,
+    "editor.inlineSuggest.enabled": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "jupyter.debugJustMyCode": false,
+    "terminal.integrated.automationProfile.windows": null,
+    "python.diagnostics.sourceMapsEnabled": true,
+    "window.zoomLevel": -0.65,
 }
